@@ -1,0 +1,345 @@
+.service-hero{
+    width: 100%;
+    margin-bottom: 15px;
+    background-image: linear-gradient(45deg, aliceblue,#222);
+    height: 300px;
+    position: relative;
+}
+.service-content{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    color: #222;
+}
+.service-hero h2{
+    font-size: 3em;
+    margin-bottom: 20px;
+    background: transparent;
+}
+.service-btn{
+    font-size: 1em;
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid #222;
+    transition: all .4s;
+    cursor: pointer;
+}
+.service-btn:hover,
+.service-btn:hover a{
+    background: #222;
+    border: 1px solid #222;
+    color: #eee;
+}
+.service-btn a{
+    background: transparent;
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+}
+marquee{
+    scroll-behavior: smooth;
+    background: #b6b3b3;
+    padding: 8px;
+    color: #222;
+    font-size: 14px;
+    font-weight: 500;
+}
+.scrollby{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.scroll{
+    width: 800px;
+    display: flex;
+    overflow-x: scroll;
+    transition: all .4s;
+
+}
+.scroll div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+.scroll div img{
+    width: 100%;
+    filter: grayscale(100%);
+    border-radius: 4px;
+    transition: all .4s;
+    cursor: pointer;
+}
+.scroll::-webkit-scrollbar{
+    display: none;
+}
+.scroll div img:hover{
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+#back,
+#next{
+    width: 30px;
+    cursor: pointer;
+    margin: 40px;
+}
+
+@media (max-width:778px) {
+    .service-hero{
+        height: 180px;
+    }
+    .service-hero h2{
+        font-size: 2em;
+    }
+    .service-btn{
+        padding: 4px 8px;
+    }
+}
+@media (max-width:478px) {
+    .service-hero{
+        height: 170px;
+    }
+    .service-hero h2{
+        font-size: 1.8em;
+    }
+}
+@media (max-width:418px) {
+    .service-hero{
+        height: 140px;
+    }
+    .service-hero h2{
+        font-size: 1.3em;
+    }
+    .service-btn{
+        padding: 3px 6px;
+    }
+    .scroll{
+        width: 270px;
+        flex-shrink: 0;
+    }
+    marquee{
+        padding: 2px;
+        color: #222;
+        font-size: 11px;
+    }
+    #back,
+    #next{
+    width: 12px;
+    margin: 4px;
+    }
+}
+
+
+/* SERVICE CARD*/
+.servive-card{
+    margin-top: 30px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+}
+.container{
+    position: relative;
+    width: 250px;
+    height: 320px;
+}
+.thecard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+.front-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #535252;
+    color: #eee;
+    border-radius: 18px;
+    text-align: center;
+}
+.front-card-2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: white;
+    color: #222;
+    border-radius: 18px;
+    text-align: center;
+}
+.front-card p{
+    background: transparent;
+    color: #eee;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.front-card-2 p{
+    background: transparent;
+    color: #222;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.back-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: white;
+    transform: rotateY(180deg);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+}
+.back-card-2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #535252;
+    color: #eee;
+    transform: rotateY(180deg);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+}
+.back-card p{
+    background: transparent;
+    color: #222;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding:  0 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.back-card-2 p{
+    background: transparent;
+    color: #eee;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding:  0 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.card-span{
+    font-weight: bold;
+    font-size: 16px;
+    background: transparent;
+}
+.card-span-2{
+    font-weight: bold;
+    font-size: 16px;
+    background: transparent;
+    color: #eee;
+}
+.thecard:hover{
+    transform: rotateY(180deg);
+}
+.card-btn{
+    font-size: 1em;
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid #eee;
+    transition: all .4s;
+    cursor: pointer;
+}
+.card-btn:hover{
+    background: #222;
+    border: 1px solid #222;
+}
+.card-btn a{
+    background: transparent;
+    text-decoration: none;
+    color: #eee;
+    font-size: 14px;
+}
+@media (max-width:478px) {
+    .servive-card{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .container{
+        position: relative;
+        width: 200px;
+        height: 200px;
+    }
+}
+.renders{
+    text-align: center;
+    border-top: 1px solid #c2c0c0;
+    padding-top: 20px;
+    border-bottom: 1px solid #c2c0c0;
+}
+.renders span{
+    font-size: 2em;
+    font-style: italic;
+}
+.rendering{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    padding: 0 20px 20px 20px;
+    margin-top: 30px;
+}
+.rendering div{
+    width: 400px;
+}
+.rendering div img{
+    width: 100%;
+    border-radius: 4px;
+}
+.rendering div p{
+    font-size: 14px;
+    font-weight: 500;
+}
+@media (max-width:458px) {
+    .renders span{
+        font-size: 1em;
+    }
+    .rendering div{
+        width: 360px;
+    }
+    .rendering div img{
+        width: 100%;
+    }
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    margin-bottom: 30px;
+}
+.contact span{
+    font-size: 1em;
+    font-weight: 700;
+}
+.contact a{
+    text-decoration: none;
+    color: #222;
+    border: 2px solid #222;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all .4S;
+}
+.contact a:hover{
+    color: #c2c0c0;
+    background: #222;
+}
